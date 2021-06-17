@@ -1,0 +1,143 @@
+html,
+body {
+    background: #070E1B;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.container-child {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+    color: #616C84;
+}
+
+p {
+    color: #CCC;
+    font-size: 35px;
+    font-family: 'Rubik', sans-serif;
+    text-align: left;
+    letter-spacing: 3px;
+    margin: 20px 0 20px 30px;
+}
+
+hr {
+    border: 1px solid white;
+    opacity: 0.2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bigNumbers {
+    margin-top: -10px;
+}
+
+.heading {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #616C84;
+}
+
+.headingSmall {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #616C84;
+}
+
+#saleTime {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #BD93F9;
+}
+
+#saleDate {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #616C84;
+}
+
+.extraData {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #FAD430;
+    margin-top: -10px;
+}
+
+.extraDataFitbit {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #26D7FD;
+    margin-top: -10px;
+}
+
+.extraDataGarmin {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #DE9329;
+    margin-top: -10px;
+}
+
+#history {
+    line-height: 18px;
+    margin-top: -15px;
+}
+
+#productName {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+}
+
+#device {
+    font-size: 12px;
+    color: #FAD430;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+hr {
+    border-top: 0px solid white;
+    opacity: 0.05;
+}
+
+input {
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 3px 0 0;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #48494F;
+    width: 100%;
+    font-size: 10px;
+    font-family: 'Rubik', sans-serif;
+    outline-width: 1;
+}
+
+ ::placeholder {
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .container-child {
+        width: 48vw;
+    }
+    body {
+        zoom: 70%;
+    }
+}
