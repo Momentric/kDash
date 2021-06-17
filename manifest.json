@@ -3,5 +3,10 @@
     "short_name": "K-Pay",
     "lang": "en",
     "start_url": "https://momentric.github.io/kDash/",
-    "display": "standalone"
+    "display": "standalone",
+    "theme_color": "#070E1B",
+    "icons": [{
+        "src": "appicon.png",
+        "sizes": "300x300"
+    }]
 }
