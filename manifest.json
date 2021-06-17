@@ -2,6 +2,6 @@
     "name": "K-Pay",
     "short_name": "K-Pay",
     "lang": "en",
-    "start_url": "/",
+    "start_url": "https://momentric.github.io/kDash/",
     "display": "standalone"
 }
