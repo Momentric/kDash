@@ -1,5 +1,5 @@
 # kDash
-A dashboard for your tablet, TV or web browser which allows you to view your Kiezelpay sales data via your API key. It's a heavily modified version of the [K·pay merchant API module](https://github.com/KiezelPay/fitbit_kpay_merchant_api).
+A web dashboard which allows you to view your Kiezelpay sales data via your API key. It's a heavily modified version of the [K·pay merchant API module](https://github.com/KiezelPay/fitbit_kpay_merchant_api).
 
 ## How does it work?
 
@@ -25,4 +25,6 @@ Your API key is stored in the localstorage of your browser, and you can clear it
 
 ## What's new in this copy?
 
-Nothing much, just customized colors and removed garmin sales.
+- Added manifest file
+- Removed platform specific info
+- Adjusted colors
