@@ -11,7 +11,7 @@ A dashboard for your tablet, TV or web browser which allows you to view your Kie
 
 ## Demo
 
-You can try it out here: https://john-reno.github.io/kDash/index.html
+You can try it out here: https://momentric.github.io/kDash/
 
 ## Usage
 
