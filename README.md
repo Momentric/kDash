@@ -23,6 +23,6 @@ Please ensure you take adequate care with your API key. Do not enter your API in
 
 Your API key is stored in the localstorage of your browser, and you can clear it if needed via your browser's devtools (or simply change the key to overwrite it).
 
-## Finally...
+## What's new in this copy?
 
-Thank you so much for reading, and let me know if you have any questions or issues. 😊
+Nothing much, just customized colors and removed garmin sales.
