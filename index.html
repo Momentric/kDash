@@ -4,8 +4,6 @@
 <head>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
@@ -15,9 +13,13 @@
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="application-name" content="K-Pay">
     <meta name="apple-mobile-web-app-title" content="K-Pay">
-    <meta name="msapplication-starturl" content="/">
+    <meta name="msapplication-starturl" content="https://momentric.github.io/kDash/">
+
+    <link rel="icon" sizes="300x300" href="appicon.png">
+    <link rel="apple-touch-icon" sizes="300x300" href="appicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
@@ -108,7 +110,9 @@
 </body>
 <script>
     document.getElementById("apiKey").value = getSavedValue("apiKey");
+
     let date = new Date();
+    let newTotal = "";
 
     function saveValue(e) {
         var id = e.id;
@@ -182,6 +186,18 @@
                 if (thisMonthAmount != undefined) {
                     totalPurchases = monthData.totalPurchases || 0;
                     totalIncome = monthData.totalIncome || 0;
+
+                    if (localStorage.getItem("lastTotal") < totalIncome && localStorage.getItem("lastTotal") !==
+                        null) {
+                        newTotal = " + $" + (totalIncome - localStorage.getItem("lastTotal")).toFixed(2).toString()
+                            .replace(
+                                /\B(?=(\d{3})+(?!\d))/g, ",");
+                        document.getElementById("lastSale").innerHTML = "<span class='saleIncrease'>" + newTotal +
+                            "</span>" + document.getElementById("lastSale").innerHTML;
+                    }
+
+                    localStorage.setItem("lastTotal", totalIncome);
+
                     if (thisMonthAmount === lastMonthAmount) {
                         thisMonthAmount = monthData.nextPayout.amount || 0;
                         lastMonthAmount = monthData.previousPayout.amount || 0;
